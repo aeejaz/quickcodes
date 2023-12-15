@@ -1,0 +1,64 @@
+*{
+font-family:  Arial, Helvetica, sans-serif;
+}
+
+.text-animation {
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-wrapper {
+  position: relative;
+}
+
+.text-wrapper h2 {
+  z-index: 4;
+  color: ##01DDFF;
+  font-size: 15vw;
+  white-space: nowrap;
+  position: absolute;
+  transform: translate(-50%, -32%);
+}
+
+.text-wrapper h2:nth-child(1) {
+  color: #FF0000;
+  -webkit-text-stroke: 2px ##FF0000;
+}
+
+.text-wrapper h2:nth-child(2) {
+  animation: wave 4s ease-in-out infinite;
+}
+
+@keyframes wave {
+  /* start point */
+  0%, 100% {
+    clip-path: polygon(
+      00% 50%,
+      20% 50%,
+      40% 50%,
+      60% 60%,
+      70% 60%,
+      90% 60%,
+      100% 50%,
+      100% 100%,
+      0 100%
+    );
+  }
+  /* Mid point */
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      20% 70%,
+      40% 66%,
+      50% 60%,
+      80% 50%,
+      80% 52%,
+      100% 55%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
